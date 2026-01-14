@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de proyectos de Alucasa: ventanas, puertas y proyectos de aluminio en Vigo.">
+    <title>Galería de Proyectos - Alucasa</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .filter-btn {
+            background: var(--color-bg);
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            font-family: var(--font-sans);
+            font-size: var(--text-sm);
+        }
+        
+        .filter-btn:hover {
+            background: var(--primary-50);
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-base);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-item-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition-base);
+        }
+        
+        .gallery-item:hover .gallery-item-info {
+            transform: translateY(0);
+        }
+        
+        .gallery-item-info h3 {
+            margin: 0;
+            font-size: 1.15em;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .gallery-item-info p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 700px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecera-fija">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo/logo.png" alt="Logo Alucasa" class="logo">
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="empresa.html">Empresa</a>
+            <a href="galeria.html" class="active">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section>
+            <h1>Galería de Proyectos</h1>
+            <p>Descubre algunos de nuestros trabajos realizados en carpintería de aluminio</p>
+            <p style="text-align: center; color: var(--color-text-light); font-style: italic;">
+                Haz clic en cualquier imagen para verla en grande
+            </p>
+        </section>
+
+        <section>
+            <h2>Filtrar por Categoría</h2>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="todos">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="ventanas">
+                    <i class="fas fa-window-maximize"></i> Ventanas
+                </button>
+                <button class="filter-btn" data-filter="puertas">
+                    <i class="fas fa-door-open"></i> Puertas
+                </button>
+                <button class="filter-btn" data-filter="proyectos">
+                    <i class="fas fa-building"></i> Proyectos
+                </button>
+            </div>
+
+            <div class="gallery-grid">
+                
+                <!-- VENTANAS -->
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-1.png" alt="Ventana corredera con vistas a piscina">
+                    <div class="gallery-item-info">
+                        <h3>Ventanales Correderos</h3>
+                        <p>Sistema de apertura panorámica con vistas al jardín</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-2.png" alt="Ventanas correderas de aluminio oscuro">
+                    <div class="gallery-item-info">
+                        <h3>Ventanas Minimalistas</h3>
+                        <p>Perfiles oscuros con máximo aprovechamiento de luz</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-3.png" alt="Ventana corredera con jardín">
+                    <div class="gallery-item-info">
+                        <h3>Ventana Jardín</h3>
+                        <p>Conexión perfecta entre interior y exterior</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-4.png" alt="Ventanales grandes para salón">
+                    <div class="gallery-item-info">
+                        <h3>Cerramientos Amplios</h3>
+                        <p>Solución de ventanales de suelo a techo</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-5.png" alt="Ventana corredera madera-aluminio">
+                    <div class="gallery-item-info">
+                        <h3>Aluminio-Madera</h3>
+                        <p>Combinación perfecta de calidez y eficiencia</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ventanas">
+                    <img src="images/galeria/ventanas/ventana-6.png" alt="Ventana de cocina moderna">
+                    <div class="gallery-item-info">
+                        <h3>Ventanas para Cocina</h3>
+                        <p>Diseño integrado con isla y vistas al jardín</p>
+                    </div>
+                </div>
+
+                <!-- PUERTAS -->
+                <div class="gallery-item" data-category="puertas">
+                    <img src="images/galeria/puertas/puerta-1.png" alt="Puerta de entrada moderna">
+                    <div class="gallery-item-info">
+                        <h3>Puerta de Entrada</h3>
+                        <p>Diseño contemporáneo con detalles en aluminio</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="puertas">
+                    <img src="images/galeria/puertas/puerta-2.png" alt="Puerta principal con cristal">
+                    <div class="gallery-item-info">
+                        <h3>Acceso Principal</h3>
+                        <p>Seguridad y estética en una sola solución</p>
+                    </div>
+                </div>
+
+                <!-- PROYECTOS -->
+                <div class="gallery-item" data-category="proyectos">
+                    <img src="images/galeria/proyectos/proyecto-1.png" alt="Salón con ventanales">
+                    <div class="gallery-item-info">
+                        <h3>Reforma Integral Salón</h3>
+                        <p>Ventanales de suelo a techo en vivienda particular</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="proyectos">
+                    <img src="images/galeria/proyectos/proyecto-2.png" alt="Showroom de ventanas">
+                    <div class="gallery-item-info">
+                        <h3>Showroom Profesional</h3>
+                        <p>Exposición de nuestros sistemas de carpintería</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="proyectos">
+                    <img src="images/galeria/proyectos/proyecto-3.png" alt="Escalera y barandilla">
+                    <div class="gallery-item-info">
+                        <h3>Barandilla Minimalista</h3>
+                        <p>Diseño moderno integrado en arquitectura contemporánea</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="proyectos">
+                    <img src="images/galeria/proyectos/proyecto-4.png" alt="Fachada edificio">
+                    <div class="gallery-item-info">
+                        <h3>Proyecto Corporativo</h3>
+                        <p>Fachada completa en edificio de oficinas</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-box">
+            <h2>¿Te Gustaría un Proyecto Similar?</h2>
+            <p>Solicita tu presupuesto personalizado sin compromiso</p>
+            <div class="contact-buttons-group">
+                <a href="contacto.html" class="btn-big">
+                    <i class="fas fa-envelope"></i> Solicitar Presupuesto
+                </a>
+                <a href="https://wa.me/34661921790?text=Hola,%20me%20interesa%20un%20proyecto%20similar" class="btn-wsp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alucasa - Carpintería de Aluminio</p>
+        <img src="images/badges/cortizo.jpg" alt="Instaladores Acreditados Cortizo" style="max-width: 250px; margin-top: 15px; border-radius: 8px;">
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/language-switcher.js"></script>
+
+</body>
+</html>

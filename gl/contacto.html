@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Alucasa: teléfono, email, WhatsApp. Orzamento sen compromiso.">
+    <title>Contacto - Alucasa Carpintaría de Aluminio</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+
+    <header class="cabecera-fija">
+        <a href="index.html" class="logo-link">
+            <img src="../images/logo/logo.png" alt="Logo Alucasa" class="logo">
+        </a>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+        
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servizos.html">Servizos</a>
+            <a href="empresa.html">Empresa</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section>
+            <h1>Contacta Connosco</h1>
+            <p>Estamos aquí para axudarche co teu proxecto de carpintaría de aluminio. Contáctanos por calquera destes medios</p>
+        </section>
+
+        <section>
+            <h2>Información de Contacto</h2>
+            
+            <div class="contact-buttons-group">
+                <a href="mailto:contacto@alucasa.info" class="btn-contact">
+                    <i class="fas fa-envelope"></i> Enviar Email
+                </a>
+                <a href="tel:+34661921790" class="btn-contact">
+                    <i class="fas fa-phone"></i> Chamar +34 661 92 17 90
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=42.293799,-8.550251" class="btn-maps" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Como Chegar
+                </a>
+                <a href="https://wa.me/34661921790?text=Ola,%20gustaríame%20recibir%20información%20sobre%20os%20vosos%20servizos" class="btn-wsp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            
+            <div class="horario-box">
+                <p>
+                    <i class="fas fa-clock"></i> <b>Horario de Atención:</b><br>
+                    Luns a venres, de 8:00 a 16:00
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Onde Estamos?</h2>
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 20px;">
+                Visítanos nas nosas instalacións en Pazos de Borbén, Pontevedra
+            </p>
+            
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); margin-top: 20px;">
+                <iframe 
+                    src="https://www.google.com/maps?q=42.293799,-8.550251&hl=gl&z=15&output=embed" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div style="margin-top: 25px; text-align: center;">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=42.293799,-8.550251" target="_blank" class="btn-big">
+                    <i class="fas fa-directions"></i> Ver Ruta en Google Maps
+                </a>
+            </div>
+            
+            <div style="margin-top: 25px; padding: 20px; background: var(--primary-50); border-radius: var(--radius-lg); border-left: 4px solid var(--color-primary);">
+                <p style="margin: 0; font-size: 1.1em; line-height: 1.8;">
+                    <strong><i class="fas fa-map-marker-alt" style="color: var(--color-primary);"></i> O Noso Enderezo:</strong><br>
+                    Lugar Igrexa nº4<br>
+                    Amoedo - Pazos de Borbén<br>
+                    36841 Pontevedra
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formulario de Contacto Rápido</h2>
+            <p>Rellena o formulario e contactarémosche por WhatsApp o antes posible</p>
+            
+            <form class="contact-form" id="whatsappForm">
+                
+                <div class="form-group">
+                    <label for="opcion">Que necesitas? <span style="color: var(--color-primary);">*</span></label>
+                    <select id="opcion" required>
+                        <option value="">-- Selecciona unha opción --</option>
+                        <option value="Solicitar orzamento">💰 Solicitar orzamento</option>
+                        <option value="Información sobre fiestras">🪟 Información sobre fiestras</option>
+                        <option value="Información sobre portas">🚪 Información sobre portas</option>
+                        <option value="Información sobre mamparas">🚿 Información sobre mamparas</option>
+                        <option value="Información sobre persianas">📐 Información sobre persianas</option>
+                        <option value="Consulta sobre proxecto específico">🏗️ Consulta sobre proxecto específico</option>
+                        <option value="Asesoramento xeral">💬 Asesoramento xeral</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre">O Teu Nome <span style="color: var(--color-primary);">*</span></label>
+                    <input type="text" id="nombre" required placeholder="Ex: Juan Pérez">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">O Teu Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" placeholder="Ex: +34 123 456 789">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">A Túa Mensaxe <span style="color: var(--color-primary);">*</span></label>
+                    <textarea id="mensaje" required placeholder="Cóntanos que necesitas... Exemplo: Gustaríame cambiar as fiestras da miña casa e recibir un orzamento sen compromiso"></textarea>
+                </div>
+                
+                <div style="text-align: center; margin-top: 10px;">
+                    <p style="font-size: 0.9em; color: var(--color-text-muted);">
+                        <i class="fas fa-info-circle"></i> Os campos con <span style="color: var(--color-primary);">*</span> son obrigatorios
+                    </p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" class="btn-big">
+                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                </div>
+                
+            </form>
+        </section>
+
+        <section class="cta-box">
+            <h2>Prefire Chamarnos Directamente?</h2>
+            <p>Estamos dispoñibles de luns a venres, de 8:00 a 16:00</p>
+            <div class="contact-buttons-group">
+                <a href="tel:+34661921790" class="btn-big">
+                    <i class="fas fa-phone-alt"></i> Chamar Agora: 661 92 17 90
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alucasa - Carpintaría de Aluminio</p>
+        <img src="../images/badges/cortizo.png" alt="Instaladores Acreditados Cortizo" style="max-width: 250px; margin-top: 15px; border-radius: 8px;">
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/language-switcher.js"></script>
+    
+    <!-- Script funcional do formulario WhatsApp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('whatsappForm');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Obter valores do formulario
+                    const opcion = document.getElementById('opcion').value;
+                    const nombre = document.getElementById('nombre').value.trim();
+                    const telefono = document.getElementById('telefono').value.trim();
+                    const mensaje = document.getElementById('mensaje').value.trim();
+                    
+                    // Validar campos obrigatorios
+                    if (!opcion || !nombre || !mensaje) {
+                        alert('⚠️ Por favor, completa todos os campos obrigatorios (*)');
+                        return;
+                    }
+                    
+                    // Construír mensaxe para WhatsApp con formato
+                    let textoWhatsApp = `🏠 *CONTACTO ALUCASA*\n\n`;
+                    textoWhatsApp += `👤 *Nome:* ${nombre}\n\n`;
+                    textoWhatsApp += `📋 *Tipo de consulta:* ${opcion}\n\n`;
+                    
+                    if (telefono) {
+                        textoWhatsApp += `📞 *Teléfono:* ${telefono}\n\n`;
+                    }
+                    
+                    textoWhatsApp += `💬 *Mensaxe:*\n${mensaje}\n\n`;
+                    textoWhatsApp += `---\n_Enviado desde www.alucasa.info_`;
+                    
+                    // Número de WhatsApp (sen espazos nin guións)
+                    const numeroWhatsApp = '34661921790';
+                    
+                    // Crear URL de WhatsApp
+                    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoWhatsApp)}`;
+                    
+                    // Abrir WhatsApp nunha nova pestana
+                    window.open(urlWhatsApp, '_blank');
+                    
+                    // Mostrar confirmación
+                    setTimeout(function() {
+                        if (confirm('✅ Mensaxe preparada. Abriuse WhatsApp correctamente?\n\nFai clic en Aceptar para limpar o formulario.')) {
+                            form.reset();
+                        }
+                    }, 500);
+                });
+                
+                // Contador de caracteres para a mensaxe
+                const mensajeTextarea = document.getElementById('mensaje');
+                const contadorDiv = document.createElement('div');
+                contadorDiv.style.cssText = 'text-align: right; font-size: 0.85em; color: var(--color-text-muted); margin-top: 5px;';
+                mensajeTextarea.parentElement.appendChild(contadorDiv);
+                
+                mensajeTextarea.addEventListener('input', function() {
+                    const length = this.value.length;
+                    contadorDiv.textContent = `${length} caracteres`;
+                    if (length > 500) {
+                        contadorDiv.style.color = 'var(--warning)';
+                    } else {
+                        contadorDiv.style.color = 'var(--color-text-muted)';
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

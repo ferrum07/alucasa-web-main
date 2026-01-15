@@ -717,7 +717,7 @@ ul li::after {
 
 .cta-box p {
     font-size: var(--text-lg);
-    color: var(--color-text-light);
+    color: var(--color-primary);  /* #b5491d - marrón oscuro */
     margin-bottom: var(--space-xl);
 }
 
@@ -899,11 +899,11 @@ footer img {
     gap: 8px;
     margin-left: 30px;
     padding-left: 30px;
-    border-left: 2px solid rgba(255,255,255,0.3);
+    border-left: 2px solid #d95a23;
 }
 
 .lang-link {
-    color: rgba(255, 255, 255, 0.8);
+    color: #d95a23;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -914,19 +914,19 @@ footer img {
 }
 
 .lang-link:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
+    background: rgba(255, 0, 0, 0.15);
+    color: #d95a23;
     transform: translateY(-1px);
 }
 
 .lang-link.active {
-    background: rgba(255, 255, 255, 0.25);
-    color: white;
+    background: rgba(255, 0, 0, 0.25);
+    color: #d95a23;
     font-weight: 700;
 }
 
 .lang-separator {
-    color: rgba(255, 255, 255, 0.5);
+    color: #d95a23;
     font-weight: 300;
     font-size: 1.2rem;
 }
@@ -946,4 +946,34 @@ footer img {
         font-size: 1rem;
         padding: 8px 16px;
     }
+}
+/* ESTILOS PARA LA DIRECCIÓN - Mejorar visibilidad */
+.location-box,
+.address-box,
+.direccion-box {
+    background: var(--color-surface);
+    border: 2px solid var(--primary-200);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.location-box p,
+.address-box p,
+.direccion-box p {
+    color: var(--color-text) !important; /* Negro/gris oscuro #1c1917 */
+    font-size: var(--text-base);
+    font-weight: 500;
+    margin: var(--space-sm) 0;
+    line-height: 1.6;
+}
+
+/* Título de la dirección */
+.location-box strong,
+.address-box strong,
+.direccion-box strong {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--text-lg);
 }
